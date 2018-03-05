@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="932" y="1214"/>
         </scene>
-        <!--View Controller-->
+        <!--Traitement View Controller-->
         <scene sceneID="xnH-Lo-vyr">
             <objects>
-                <viewController id="DpH-OG-K7I" sceneMemberID="viewController">
+                <viewController id="DpH-OG-K7I" customClass="TraitementViewController" customModule="appliMob" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rlM-Eb-HyN"/>
                         <viewControllerLayoutGuide type="bottom" id="Uvp-gO-kJX"/>
@@ -164,6 +164,32 @@
                                 <rect key="frame" x="39" y="124" width="296" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="traitementCell" id="r82-3W-cal" customClass="TraitementTableViewCell" customModule="appliMob" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="296" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r82-3W-cal" id="4Zg-xQ-X3f">
+                                            <rect key="frame" x="0.0" y="0.0" width="296" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nil-F2-P7A">
+                                                    <rect key="frame" x="8" y="12" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nomTraitement" destination="nil-F2-P7A" id="R93-Hr-3Ca"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DpH-OG-K7I" id="d9q-iH-AAD"/>
+                                    <outlet property="delegate" destination="DpH-OG-K7I" id="wXh-Jf-Yj0"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Traitement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUO-K9-yLk">
                                 <rect key="frame" x="155" y="95" width="83" height="36"/>
@@ -204,6 +230,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="traitementTable" destination="WXf-Ic-RrU" id="6e2-Ox-6nm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km1-jr-DsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
