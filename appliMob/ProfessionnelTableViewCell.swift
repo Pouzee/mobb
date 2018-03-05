@@ -1,5 +1,5 @@
 //
-//  TraitementTableViewCell.swift
+//  ProfessionnelTableViewCell.swift
 //  appliMob
 //
 //  Created by Clement LOUBIERE on 05/03/2018.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class TraitementTableViewCell: UITableViewCell {
+class ProfessionnelTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nomTraitement: UILabel!
     
+    @IBOutlet weak var ProfessionnalName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

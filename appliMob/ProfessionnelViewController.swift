@@ -1,5 +1,5 @@
 //
-//  TraitementViewController.swift
+//  ProfessionnelViewController.swift
 //  appliMob
 //
 //  Created by Clement LOUBIERE on 05/03/2018.
@@ -8,27 +8,31 @@
 
 import UIKit
 
-class TraitementViewController: UIViewController,UITableViewDataSource,
-UITableViewDelegate{
-
+class ProfessionnelViewController: UIViewController,UITableViewDataSource,
+UITableViewDelegate {
+    
     func readPropertyList(){
         
         var format = PropertyListSerialization.PropertyListFormat.xml//format of the property list
         var plistData:[String] = []  //our data
-        let plistPath:String? = Bundle.main.path(forResource: "TraitementPList", ofType: "plist")! //the path of the data
+        let plistPath:String? = Bundle.main.path(forResource: "ProfessionnelPList", ofType: "plist")! //the path of the data
         let plistXML = FileManager.default.contents(atPath: plistPath!)! //the data in XML format
         do{ //convert the data to a dictionary and handle errors.
             plistData = try PropertyListSerialization.propertyList(from: plistXML,options: .mutableContainersAndLeaves,format: &format)as! [String]
-            traitement = plistData 
+            professionnel = plistData
         }
         catch{ // error condition
             print("Error reading plist: \(error), format: \(format)")
         }
     }
+
+    var professionnel : [String] = []
     
+    @IBOutlet weak var professionnelTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         readPropertyList()
+
         // Do any additional setup after loading the view.
     }
 
@@ -36,7 +40,16 @@ UITableViewDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return self.professionnel.count
+    }
     
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = self.professionnelTable.dequeueReusableCell(withIdentifier: "ProfessionnelCell", for: indexPath)as!ProfessionnelTableViewCell
+        cell.ProfessionnalName.text = self.professionnel[indexPath.row]
+        return cell
+    }
 
     /*
     // MARK: - Navigation
@@ -47,25 +60,5 @@ UITableViewDelegate{
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    
-    
-    var traitement : [String] = []
-    
-    @IBOutlet weak var traitementTable: UITableView!
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.traitement.count
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = self.traitementTable.dequeueReusableCell(withIdentifier: "traitementCell", for: indexPath)as!TraitementTableViewCell
-        cell.nomTraitement.text = self.traitement[indexPath.row]
-        return cell
-    }
-    
-    
-    
+
 }

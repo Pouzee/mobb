@@ -14,6 +14,10 @@
 		E503BF4B20468ED7003800B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E503BF4A20468ED7003800B8 /* Assets.xcassets */; };
 		E503BF4E20468ED7003800B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E503BF4C20468ED7003800B8 /* LaunchScreen.storyboard */; };
 		E503BF5920468ED8003800B8 /* appliMobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E503BF5820468ED8003800B8 /* appliMobTests.swift */; };
+		E53BE5FC204D94320037222E /* ProfessionnelPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E53BE5FB204D94320037222E /* ProfessionnelPList.plist */; };
+		E53BE5FE204D950F0037222E /* ActivitePList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E53BE5FD204D950F0037222E /* ActivitePList.plist */; };
+		E53BE604204D99360037222E /* ProfessionnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53BE603204D99360037222E /* ProfessionnelViewController.swift */; };
+		E53BE605204DA5FB0037222E /* ProfessionnelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53BE5FF204D961F0037222E /* ProfessionnelTableViewCell.swift */; };
 		E5821925204D74A500A2C51C /* TraitementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */; };
 		E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5821926204D776000A2C51C /* TraitementViewController.swift */; };
 		E5821929204D7CD600A2C51C /* TraitementPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5821928204D7CD600A2C51C /* TraitementPList.plist */; };
@@ -41,6 +45,10 @@
 		E503BF5420468ED8003800B8 /* appliMobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appliMobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E503BF5820468ED8003800B8 /* appliMobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appliMobTests.swift; sourceTree = "<group>"; };
 		E503BF5A20468ED8003800B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E53BE5FB204D94320037222E /* ProfessionnelPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProfessionnelPList.plist; sourceTree = "<group>"; };
+		E53BE5FD204D950F0037222E /* ActivitePList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ActivitePList.plist; sourceTree = "<group>"; };
+		E53BE5FF204D961F0037222E /* ProfessionnelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionnelTableViewCell.swift; sourceTree = "<group>"; };
+		E53BE603204D99360037222E /* ProfessionnelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionnelViewController.swift; sourceTree = "<group>"; };
 		E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraitementTableViewCell.swift; path = ../TraitementTableViewCell.swift; sourceTree = "<group>"; };
 		E5821926204D776000A2C51C /* TraitementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementViewController.swift; sourceTree = "<group>"; };
 		E5821928204D7CD600A2C51C /* TraitementPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TraitementPList.plist; sourceTree = "<group>"; };
@@ -86,15 +94,19 @@
 			isa = PBXGroup;
 			children = (
 				E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */,
+				E53BE5FF204D961F0037222E /* ProfessionnelTableViewCell.swift */,
 				E503BF4020468ED7003800B8 /* AppDelegate.swift */,
 				E503BF4220468ED7003800B8 /* ViewController.swift */,
 				E503BF4420468ED7003800B8 /* Main.storyboard */,
+				E53BE603204D99360037222E /* ProfessionnelViewController.swift */,
 				E5821926204D776000A2C51C /* TraitementViewController.swift */,
 				E5821928204D7CD600A2C51C /* TraitementPList.plist */,
 				E503BF4A20468ED7003800B8 /* Assets.xcassets */,
 				E503BF4C20468ED7003800B8 /* LaunchScreen.storyboard */,
 				E503BF4F20468ED7003800B8 /* Info.plist */,
 				E503BF4720468ED7003800B8 /* appliMob.xcdatamodeld */,
+				E53BE5FB204D94320037222E /* ProfessionnelPList.plist */,
+				E53BE5FD204D950F0037222E /* ActivitePList.plist */,
 			);
 			path = appliMob;
 			sourceTree = "<group>";
@@ -191,6 +203,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53BE5FE204D950F0037222E /* ActivitePList.plist in Resources */,
+				E53BE5FC204D94320037222E /* ProfessionnelPList.plist in Resources */,
 				E5821929204D7CD600A2C51C /* TraitementPList.plist in Resources */,
 				E503BF4E20468ED7003800B8 /* LaunchScreen.storyboard in Resources */,
 				E503BF4B20468ED7003800B8 /* Assets.xcassets in Resources */,
@@ -217,6 +231,8 @@
 				E503BF4920468ED7003800B8 /* appliMob.xcdatamodeld in Sources */,
 				E503BF4120468ED7003800B8 /* AppDelegate.swift in Sources */,
 				E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */,
+				E53BE605204DA5FB0037222E /* ProfessionnelTableViewCell.swift in Sources */,
+				E53BE604204D99360037222E /* ProfessionnelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

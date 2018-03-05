@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Kinesitherapeute</string>
+	<string>Orthophoniste</string>
+	<string>Infirmier</string>
+	<string>Psychologue</string>
+	<string>Neuropsychologue</string>
+	<string>Neurologue</string>
+	<string>Medecin generaliste</string>
+	<string>Ergotherapeute</string>
+	<string>Psychomotricien</string>
+	<string>Pedicure-podologue</string>
+	<string>Dieteticien</string>
+	<string>Orthoptiste</string>
+</array>
+</plist>
