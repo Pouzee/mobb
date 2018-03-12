@@ -138,6 +138,10 @@
                                 <rect key="frame" x="198" y="553" width="161" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="valider:" destination="DpH-OG-K7I" eventType="touchUpInside" id="SHM-1W-XT8"/>
+                                    <segue destination="MNb-da-yCJ" kind="show" id="b8K-FG-rEh"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="goi-xc-T0N">
                                 <rect key="frame" x="0.0" y="322" width="375" height="56"/>
@@ -231,6 +235,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="dateDebutTraitement" destination="goi-xc-T0N" id="fL3-ah-Nul"/>
+                        <outlet property="dateFinTraitement" destination="55T-cO-cBT" id="Sf0-Y6-rtt"/>
+                        <outlet property="heureTraitement" destination="cDJ-po-1nb" id="Fu2-Gp-nDZ"/>
                         <outlet property="traitementTable" destination="WXf-Ic-RrU" id="6e2-Ox-6nm"/>
                     </connections>
                 </viewController>
@@ -631,6 +638,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="b8K-FG-rEh"/>
         <segue reference="ruF-Et-JLb"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -53,7 +53,18 @@ UITableViewDelegate{
     
     var traitement : [String] = []
     
-    @IBOutlet weak var traitementTable: UITableView!
+    @IBOutlet weak var traitementTable: UITableView!//La table
+    @IBOutlet weak var dateDebutTraitement: UIDatePicker!//datepicker Debut de traitment
+    @IBOutlet weak var heureTraitement: UIDatePicker!//datepicker Heure de traitement
+    @IBOutlet weak var dateFinTraitement: UIDatePicker!//datepicker Fin du traitement
+    
+    @IBAction func valider(_ sender: Any) {//called when click on the valider button
+        print(dateDebutTraitement.date)
+        print(heureTraitement.date)
+        print(Calendar.current.component(.hour, from: heureTraitement.date))
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.traitement.count
