@@ -3,10 +3,11 @@
     <entity name="Traitement" representedClassName="Traitement" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebutDeTraitement" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFinDeTraitement" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="heureDeTraitement" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="heureDeTraitement" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minuteDeTraitement" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Traitement" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Traitement" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>
