@@ -22,6 +22,7 @@
 		E5821925204D74A500A2C51C /* TraitementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */; };
 		E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5821926204D776000A2C51C /* TraitementViewController.swift */; };
 		E5821929204D7CD600A2C51C /* TraitementPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5821928204D7CD600A2C51C /* TraitementPList.plist */; };
+		E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF485C205920C400A3797E /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraitementTableViewCell.swift; path = ../TraitementTableViewCell.swift; sourceTree = "<group>"; };
 		E5821926204D776000A2C51C /* TraitementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementViewController.swift; sourceTree = "<group>"; };
 		E5821928204D7CD600A2C51C /* TraitementPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TraitementPList.plist; sourceTree = "<group>"; };
+		E5DF485C205920C400A3797E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				E503BF4420468ED7003800B8 /* Main.storyboard */,
 				E569F4892056D45400B0EFEF /* MenuTableViewCell.swift */,
 				E53BE603204D99360037222E /* ProfessionnelViewController.swift */,
+				E5DF485C205920C400A3797E /* MenuViewController.swift */,
 				E5821926204D776000A2C51C /* TraitementViewController.swift */,
 				E5821928204D7CD600A2C51C /* TraitementPList.plist */,
 				E503BF4A20468ED7003800B8 /* Assets.xcassets */,
@@ -233,6 +236,7 @@
 				E503BF4320468ED7003800B8 /* ViewController.swift in Sources */,
 				E569F48A2056D45400B0EFEF /* MenuTableViewCell.swift in Sources */,
 				E503BF4920468ED7003800B8 /* appliMob.xcdatamodeld in Sources */,
+				E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */,
 				E503BF4120468ED7003800B8 /* AppDelegate.swift in Sources */,
 				E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */,
 				E53BE605204DA5FB0037222E /* ProfessionnelTableViewCell.swift in Sources */,

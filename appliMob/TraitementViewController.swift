@@ -73,8 +73,9 @@ UITableViewDelegate{
         let traitement = Traitement(context: context)
         traitement.dateDebutDeTraitement = dateDebutTraitement.date.addingTimeInterval(3600) as NSDate
         traitement.dateFinDeTraitement = dateFinTraitement.date.addingTimeInterval(3600) as NSDate
-        traitement.heureDeTraitement = Int32(Calendar.current.component(.hour, from: heureTraitement.date))
-        traitement.minuteDeTraitement = Int32(Calendar.current.component(.minute, from: heureTraitement.date))
+        print((Int64(Calendar.current.component(.hour, from: heureTraitement.date))))
+        traitement.heureDeTraitement = (Int32(Calendar.current.component(.hour, from: heureTraitement.date)))
+        traitement.minuteDeTraitement = (Int32(Calendar.current.component(.minute, from: heureTraitement.date)))
         traitement.nom = nom
         print (nom)
         
