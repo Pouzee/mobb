@@ -298,6 +298,10 @@
                                 <rect key="frame" x="198" y="553" width="161" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="Valider:" destination="Ez5-6m-JFx" eventType="touchUpInside" id="fv0-qw-Cfs"/>
+                                    <segue destination="MNb-da-yCJ" kind="show" id="b6h-8E-bCb"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2E9-L3-SYS">
                                 <rect key="frame" x="0.0" y="355" width="375" height="56"/>
@@ -382,6 +386,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="dateRdv" destination="2E9-L3-SYS" id="Nar-LF-xue"/>
+                        <outlet property="heureAvance" destination="dcu-32-2qh" id="26f-gI-MVn"/>
                         <outlet property="professionnelTable" destination="qiU-B8-1UP" id="cPK-vI-y4W"/>
                     </connections>
                 </viewController>

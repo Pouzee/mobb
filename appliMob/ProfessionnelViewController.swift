@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ProfessionnelViewController: UIViewController,UITableViewDataSource,
 UITableViewDelegate {
@@ -27,8 +28,33 @@ UITableViewDelegate {
     }
 
     var professionnel : [String] = []
+    var nom : String = ""
     
     @IBOutlet weak var professionnelTable: UITableView!
+    @IBOutlet weak var heureAvance: UITextField!
+    @IBOutlet weak var dateRdv: UIDatePicker!
+    
+    @IBAction func Valider(_ sender: Any) {
+        
+        print(dateRdv.date.addingTimeInterval(3600))
+
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let rdv = Rdv(context: context)
+        rdv.date = dateRdv.date.addingTimeInterval(3600) as NSDate
+        rdv.rappel = Int32(Int(heureAvance.text ?? "0")!)
+        rdv.professionnel = nom
+        print (nom)
+        
+        do {
+            try context.save()
+            
+        } catch {
+            print("Failed saving")
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         readPropertyList()
@@ -40,6 +66,13 @@ UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        print("Selected Cell Text #\(professionnel[indexPath.row])")
+        nom = professionnel[indexPath.row]
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.professionnel.count
     }
