@@ -22,6 +22,7 @@
 		E5821925204D74A500A2C51C /* TraitementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */; };
 		E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5821926204D776000A2C51C /* TraitementViewController.swift */; };
 		E5821929204D7CD600A2C51C /* TraitementPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5821928204D7CD600A2C51C /* TraitementPList.plist */; };
+		E596FCE4205ABA670024F885 /* RdvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */; };
 		E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF485C205920C400A3797E /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraitementTableViewCell.swift; path = ../TraitementTableViewCell.swift; sourceTree = "<group>"; };
 		E5821926204D776000A2C51C /* TraitementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementViewController.swift; sourceTree = "<group>"; };
 		E5821928204D7CD600A2C51C /* TraitementPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TraitementPList.plist; sourceTree = "<group>"; };
+		E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RdvTableViewCell.swift; sourceTree = "<group>"; };
 		E5DF485C205920C400A3797E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */,
+				E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */,
 				E53BE5FF204D961F0037222E /* ProfessionnelTableViewCell.swift */,
 				E503BF4020468ED7003800B8 /* AppDelegate.swift */,
 				E503BF4220468ED7003800B8 /* ViewController.swift */,
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E596FCE4205ABA670024F885 /* RdvTableViewCell.swift in Sources */,
 				E5821925204D74A500A2C51C /* TraitementTableViewCell.swift in Sources */,
 				E503BF4320468ED7003800B8 /* ViewController.swift in Sources */,
 				E569F48A2056D45400B0EFEF /* MenuTableViewCell.swift in Sources */,
