@@ -14,7 +14,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var planningTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchPlanningData()
+        fetchPlanningDataTraitement()
+        fetchPlanningDataRdv()
+        planning = planning.sorted()
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +36,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     */
     
-    func fetchPlanningData(){
+    func fetchPlanningDataTraitement(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request : NSFetchRequest<Traitement> = Traitement.fetchRequest()
@@ -68,6 +70,40 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    
+    func fetchPlanningDataRdv(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request : NSFetchRequest<Rdv> = Rdv.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(Rdv.date), ascending: true)
+        request.sortDescriptors = [sort]
+        do {
+            let result = try context.fetch(request)
+            for data in result as [NSManagedObject] {
+                
+                let date = (data.value(forKey : "date")) as? Date
+                
+                var affich = String(Calendar.current.component(.hour, from:(date ?? Date())))
+                affich += "h"
+                let minute = String(Calendar.current.component(.minute, from:(date ?? Date())))
+                if (minute.characters.count < 2){
+                    affich += "0"
+                }
+                affich += minute
+                
+                
+                affich += " - "
+                affich += data.value(forKey : "professionnel") as? String ?? " "
+                
+                planning.append(affich)
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
+        
+    }
     
     
     var planning : [String] = []

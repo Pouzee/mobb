@@ -43,7 +43,7 @@ UITableViewDelegate {
         let context = appDelegate.persistentContainer.viewContext
         let rdv = Rdv(context: context)
         rdv.date = dateRdv.date.addingTimeInterval(3600) as NSDate
-        rdv.rappel = Int32(Int(heureAvance.text ?? "0")!)
+        rdv.rappel = Int32(Int(heureAvance.text ?? "0") ?? 0)
         rdv.professionnel = nom
         print (nom)
         
