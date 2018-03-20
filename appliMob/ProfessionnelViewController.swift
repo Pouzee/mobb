@@ -36,13 +36,13 @@ UITableViewDelegate {
     
     @IBAction func Valider(_ sender: Any) {
         
-        print(dateRdv.date.addingTimeInterval(3600))
+        //print(dateRdv.date.addingTimeInterval(3600))
 
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let rdv = Rdv(context: context)
-        rdv.date = dateRdv.date.addingTimeInterval(3600) as NSDate
+        rdv.date = dateRdv.date/*.addingTimeInterval(3600)*/ as NSDate
         rdv.rappel = Int32(Int(heureAvance.text ?? "0") ?? 0)
         rdv.professionnel = nom
         print (nom)

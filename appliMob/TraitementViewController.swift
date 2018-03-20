@@ -70,7 +70,7 @@ UITableViewDelegate{
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        let traitement = Traitement(context: context)
+        let traitement = TraitementCoreData(context: context)
         traitement.dateDebutDeTraitement = dateDebutTraitement.date.addingTimeInterval(3600) as NSDate
         traitement.dateFinDeTraitement = dateFinTraitement.date.addingTimeInterval(3600) as NSDate
         print((Int64(Calendar.current.component(.hour, from: heureTraitement.date))))
@@ -83,7 +83,7 @@ UITableViewDelegate{
             try context.save()
             
             
-            let request : NSFetchRequest<Traitement> = Traitement.fetchRequest()
+            let request : NSFetchRequest<TraitementCoreData> = TraitementCoreData.fetchRequest()
             //request.predicate = NSPredicate(format: "age = %@", "12")
             request.returnsObjectsAsFaults = false
             do {

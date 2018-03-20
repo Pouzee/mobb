@@ -24,6 +24,7 @@
 		E5821929204D7CD600A2C51C /* TraitementPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5821928204D7CD600A2C51C /* TraitementPList.plist */; };
 		E596FCE4205ABA670024F885 /* RdvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */; };
 		E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF485C205920C400A3797E /* MenuViewController.swift */; };
+		E5E92BA920611F73000E0C7A /* Traitement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E92BA820611F73000E0C7A /* Traitement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		E5821928204D7CD600A2C51C /* TraitementPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TraitementPList.plist; sourceTree = "<group>"; };
 		E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RdvTableViewCell.swift; sourceTree = "<group>"; };
 		E5DF485C205920C400A3797E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E5E92BA820611F73000E0C7A /* Traitement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Traitement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				E503BF4720468ED7003800B8 /* appliMob.xcdatamodeld */,
 				E53BE5FB204D94320037222E /* ProfessionnelPList.plist */,
 				E53BE5FD204D950F0037222E /* ActivitePList.plist */,
+				E5E92BA820611F73000E0C7A /* Traitement.swift */,
 			);
 			path = appliMob;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				E503BF4120468ED7003800B8 /* AppDelegate.swift in Sources */,
 				E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */,
 				E53BE605204DA5FB0037222E /* ProfessionnelTableViewCell.swift in Sources */,
+				E5E92BA920611F73000E0C7A /* Traitement.swift in Sources */,
 				E53BE604204D99360037222E /* ProfessionnelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

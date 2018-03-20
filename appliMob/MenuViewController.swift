@@ -42,8 +42,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func fetchPlanningDataTraitement(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        let request : NSFetchRequest<Traitement> = Traitement.fetchRequest()
-        let sort = NSSortDescriptor(key: #keyPath(Traitement.dateDebutDeTraitement), ascending: true)
+        let request : NSFetchRequest<TraitementCoreData> = TraitementCoreData.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(TraitementCoreData.dateDebutDeTraitement), ascending: true)
         request.sortDescriptors = [sort]
         do {
             let result = try context.fetch(request)

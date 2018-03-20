@@ -5,7 +5,7 @@
         <attribute name="professionnel" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rappel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="Traitement" representedClassName="Traitement" syncable="YES" codeGenerationType="class">
+    <entity name="TraitementCoreData" representedClassName="TraitementCoreData" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebutDeTraitement" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFinDeTraitement" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="heureDeTraitement" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -13,7 +13,7 @@
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Traitement" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="Rdv" positionX="-63" positionY="18" width="128" height="90"/>
+        <element name="TraitementCoreData" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>
