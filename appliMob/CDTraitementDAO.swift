@@ -9,24 +9,28 @@
 import Foundation
 import CoreData
 
-class CDTraitementDAO: CDDAO, PatientDAO {
+class CDTraitementDAO: CDDAO, TraitementDAO {
     
-    func create() throws -> Traitement {
-        return Traitement(dateDebutDeTraitement: Date(), dateFinDeTraitement: Date(), nomTraitement: String())
+    func create() throws -> TraitementCoreData {
+        return TraitementCoreData(context: self.context)
     }
     
-    func delete(obj: Traitement) {
-        // TODO
+    func delete(obj: TraitementCoreData) {
+        self.context.delete(obj)
     }
     
-    func getAll() throws -> [Traitement]? {
+    func getAll() throws -> [TraitementCoreData?] {
+        var traitements: [TraitementCoreData] = []
         let request: NSFetchRequest<TraitementCoreData> = NSFetchRequest(entityName: "TraitementCoreData")
         do {
-            let traitements:[Traitement] = try self.context.fetch(request as! NSFetchRequest<NSFetchRequestResult>) as! [Traitement]
-            return traitements
+            traitements = try self.context.fetch(request)
         } catch let error {
             throw error
         }
+        return traitements
+        
+      
+        
     }
     
     

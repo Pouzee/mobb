@@ -63,7 +63,7 @@ UITableViewDelegate{
     var nom : String = ""
     
     @IBAction func valider(_ sender: Any) {//called when click on the valider button
-        print(dateDebutTraitement.date.addingTimeInterval(3600))
+        /*print(dateDebutTraitement.date.addingTimeInterval(3600))
         print(heureTraitement.date)
         print(Calendar.current.component(.hour, from: heureTraitement.date))
         print(Calendar.current.component(.minute, from: heureTraitement.date))
@@ -78,9 +78,23 @@ UITableViewDelegate{
         traitement.minuteDeTraitement = (Int32(Calendar.current.component(.minute, from: heureTraitement.date)))
         traitement.nom = nom
         print (nom)
+        */
+        
+        
+        
         
         do {
-            try context.save()
+            let traitement : TraitementCoreData = try CoreDataDAOFactory.getInstance().getTraitementDAO().create()
+            traitement.dateDebutDeTraitement = dateDebutTraitement.date as NSDate
+            traitement.dateFinDeTraitement = dateFinTraitement.date as NSDate
+            traitement.heureTraitement = heureTraitement.date as NSDate
+            traitement.nom = nom
+            
+            try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
+            
+            
+            
+            /*try context.save()
             
             
             let request : NSFetchRequest<TraitementCoreData> = TraitementCoreData.fetchRequest()
@@ -95,7 +109,7 @@ UITableViewDelegate{
             } catch {
                 
                 print("Failed")
-            }
+            }*/
         } catch {
             print("Failed saving")
         }

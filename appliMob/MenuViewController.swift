@@ -40,22 +40,27 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     */
     
     func fetchPlanningDataTraitement(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request : NSFetchRequest<TraitementCoreData> = TraitementCoreData.fetchRequest()
         let sort = NSSortDescriptor(key: #keyPath(TraitementCoreData.dateDebutDeTraitement), ascending: true)
-        request.sortDescriptors = [sort]
+        request.sortDescriptors = [sort]*/
         do {
-            let result = try context.fetch(request)
+           // let result = try context.fetch(request)
+            
+            
+            let result : [TraitementCoreData] = try CoreDataDAOFactory.getInstance().getTraitementDAO().getAll() as! [TraitementCoreData]
             for data in result as [NSManagedObject] {
                 print(data.value(forKey: "nom") as! String)
                
                 
-                var affich = String(describing: Int(data.value(forKey : "heureDeTraitement")as? Int32 ?? -1))
+                //var affich = String(describing: Int(data.value(forKey : "heureDeTraitement")as? Int32 ?? -1))
+                let date = (data.value(forKey : "heureTraitement")) as? Date
+                var affich = String(Calendar.current.component(.hour, from:(date ?? Date())))
                 
                 
                 affich += "h"
-                let minute = String(describing: Int((data.value(forKey : "minuteDeTraitement")as? Int32 ?? -1) ))
+                let minute = String(Calendar.current.component(.minute, from:(date ?? Date())))
                 if (minute.characters.count < 2){
                     affich += "0"
                 }

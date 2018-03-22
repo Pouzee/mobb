@@ -6,7 +6,7 @@
 //  Copyright © 2018 Clement LOUBIERE. All rights reserved.
 //
 
-import Foundation
+/*import Foundation
 import UIKit
 
 class Traitement: NSObject {
@@ -26,4 +26,4 @@ class Traitement: NSObject {
     
     var heureFinDeTraitement : Int {return (Calendar.current.component(.hour, from: self.dateFinDeTraitement))}
     var minuteFinDeTraitement: Int {return (Calendar.current.component(.minute, from: self.dateFinDeTraitement))}
-}
+}*/

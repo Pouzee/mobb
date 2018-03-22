@@ -10,13 +10,9 @@ import Foundation
 
 
 
-protocol PatientDAO: DAO {
-    associatedtype Object = Traitement
+protocol TraitementDAO: DAO {
+    typealias Object = TraitementCoreData
     
-    func create() throws -> Traitement
     
-    func delete(obj: Traitement)
-    
-    func getAll() throws -> [Traitement]?
     
 }
