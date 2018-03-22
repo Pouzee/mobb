@@ -39,16 +39,22 @@ UITableViewDelegate {
         //print(dateRdv.date.addingTimeInterval(3600))
 
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let rdv = Rdv(context: context)
         rdv.date = dateRdv.date/*.addingTimeInterval(3600)*/ as NSDate
         rdv.rappel = Int32(Int(heureAvance.text ?? "0") ?? 0)
         rdv.professionnel = nom
-        print (nom)
+        print (nom)*/
         
         do {
-            try context.save()
+            let rdv : Rdv = try CoreDataDAOFactory.getInstance().getRdvDAO().create()
+            rdv.date = dateRdv.date/*.addingTimeInterval(3600)*/ as NSDate
+            rdv.rappel = Int32(Int(heureAvance.text ?? "0") ?? 0)
+            rdv.professionnel = nom
+            
+            
+            try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
             
         } catch {
             print("Failed saving")

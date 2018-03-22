@@ -80,13 +80,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     func fetchPlanningDataRdv(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request : NSFetchRequest<Rdv> = Rdv.fetchRequest()
         let sort = NSSortDescriptor(key: #keyPath(Rdv.date), ascending: true)
-        request.sortDescriptors = [sort]
+        request.sortDescriptors = [sort]*/
         do {
-            let result = try context.fetch(request)
+            //let result = try context.fetch(request)
+            let result : [Rdv] = try CoreDataDAOFactory.getInstance().getRdvDAO().getAll() as! [Rdv]
             for data in result as [NSManagedObject] {
                 
                 let date = (data.value(forKey : "date")) as? Date
@@ -114,13 +115,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func fetchDataRdv(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request : NSFetchRequest<Rdv> = Rdv.fetchRequest()
         let sort = NSSortDescriptor(key: #keyPath(Rdv.date), ascending: true)
-        request.sortDescriptors = [sort]
+        request.sortDescriptors = [sort]*/
         do {
-            let result = try context.fetch(request)
+            //let result = try context.fetch(request)
+            let result : [Rdv] = try CoreDataDAOFactory.getInstance().getRdvDAO().getAll() as! [Rdv]
             for data in result as [NSManagedObject] {
                 
                 let date = (data.value(forKey : "date")) as? Date

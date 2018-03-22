@@ -25,6 +25,8 @@
 		E596FCE4205ABA670024F885 /* RdvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */; };
 		E5CD88D82063E4450085D547 /* CDDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88D72063E4450085D547 /* CDDAO.swift */; };
 		E5CD88DA2063E46D0085D547 /* CoreDataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88D92063E46D0085D547 /* CoreDataConnection.swift */; };
+		E5CD88DC2063F75C0085D547 /* RdvDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88DB2063F75C0085D547 /* RdvDAO.swift */; };
+		E5CD88DE2063F7C60085D547 /* CDRdvDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88DD2063F7C60085D547 /* CDRdvDAO.swift */; };
 		E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF485C205920C400A3797E /* MenuViewController.swift */; };
 		E5E92BAE20612777000E0C7A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E92BAD20612777000E0C7A /* DAO.swift */; };
 		E5E92BB0206127EB000E0C7A /* TraitementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E92BAF206127EB000E0C7A /* TraitementDAO.swift */; };
@@ -66,6 +68,8 @@
 		E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RdvTableViewCell.swift; sourceTree = "<group>"; };
 		E5CD88D72063E4450085D547 /* CDDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDAO.swift; sourceTree = "<group>"; };
 		E5CD88D92063E46D0085D547 /* CoreDataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnection.swift; sourceTree = "<group>"; };
+		E5CD88DB2063F75C0085D547 /* RdvDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RdvDAO.swift; sourceTree = "<group>"; };
+		E5CD88DD2063F7C60085D547 /* CDRdvDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRdvDAO.swift; sourceTree = "<group>"; };
 		E5DF485C205920C400A3797E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E5E92BAD20612777000E0C7A /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DAO.swift; path = ../DAO.swift; sourceTree = "<group>"; };
 		E5E92BAF206127EB000E0C7A /* TraitementDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementDAO.swift; sourceTree = "<group>"; };
@@ -165,7 +169,9 @@
 				E5E92BB120612BAA000E0C7A /* AbstractDAOFactory.swift */,
 				E5E92BB320612C11000E0C7A /* CoreDataDAOFactory.swift */,
 				E5E92BB520612C9E000E0C7A /* CDTraitementDAO.swift */,
+				E5CD88DD2063F7C60085D547 /* CDRdvDAO.swift */,
 				E5E92BAF206127EB000E0C7A /* TraitementDAO.swift */,
+				E5CD88DB2063F75C0085D547 /* RdvDAO.swift */,
 				E53BE5FD204D950F0037222E /* ActivitePList.plist */,
 				E53BE5FB204D94320037222E /* ProfessionnelPList.plist */,
 				E5CD88D72063E4450085D547 /* CDDAO.swift */,
@@ -287,11 +293,13 @@
 				E5E92BB420612C11000E0C7A /* CoreDataDAOFactory.swift in Sources */,
 				E5CD88D82063E4450085D547 /* CDDAO.swift in Sources */,
 				E569F48A2056D45400B0EFEF /* MenuTableViewCell.swift in Sources */,
+				E5CD88DC2063F75C0085D547 /* RdvDAO.swift in Sources */,
 				E503BF4920468ED7003800B8 /* appliMob.xcdatamodeld in Sources */,
 				E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */,
 				E5E92BB620612C9E000E0C7A /* CDTraitementDAO.swift in Sources */,
 				E5E92BB220612BAA000E0C7A /* AbstractDAOFactory.swift in Sources */,
 				E503BF4120468ED7003800B8 /* AppDelegate.swift in Sources */,
+				E5CD88DE2063F7C60085D547 /* CDRdvDAO.swift in Sources */,
 				E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */,
 				E53BE605204DA5FB0037222E /* ProfessionnelTableViewCell.swift in Sources */,
 				E53BE604204D99360037222E /* ProfessionnelViewController.swift in Sources */,
