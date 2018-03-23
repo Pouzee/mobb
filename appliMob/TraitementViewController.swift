@@ -131,6 +131,8 @@ UITableViewDelegate{
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let request = UNNotificationRequest(identifier: "any", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+        EventHandler.getInstance().createTraitementEvent(title: nom, startDate: dateDebutTraitement.date as NSDate, endDate: dateFinTraitement.date as NSDate, heureTraitement: heureTraitement.date as NSDate)
     }
     
     func DeleteAllData(){
