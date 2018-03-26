@@ -16,6 +16,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var planningTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated:true);
         fetchPlanningDataTraitement()
         fetchPlanningDataRdv()
         fetchDataRdv()

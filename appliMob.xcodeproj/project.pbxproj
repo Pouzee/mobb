@@ -28,6 +28,7 @@
 		E5CD88DA2063E46D0085D547 /* CoreDataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88D92063E46D0085D547 /* CoreDataConnection.swift */; };
 		E5CD88DC2063F75C0085D547 /* RdvDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88DB2063F75C0085D547 /* RdvDAO.swift */; };
 		E5CD88DE2063F7C60085D547 /* CDRdvDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88DD2063F7C60085D547 /* CDRdvDAO.swift */; };
+		E5DA232B206965D10010DA8B /* ActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA2329206965D10010DA8B /* ActiviteViewController.swift */; };
 		E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF485C205920C400A3797E /* MenuViewController.swift */; };
 		E5E92BAE20612777000E0C7A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E92BAD20612777000E0C7A /* DAO.swift */; };
 		E5E92BB0206127EB000E0C7A /* TraitementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E92BAF206127EB000E0C7A /* TraitementDAO.swift */; };
@@ -72,6 +73,7 @@
 		E5CD88D92063E46D0085D547 /* CoreDataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnection.swift; sourceTree = "<group>"; };
 		E5CD88DB2063F75C0085D547 /* RdvDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RdvDAO.swift; sourceTree = "<group>"; };
 		E5CD88DD2063F7C60085D547 /* CDRdvDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDRdvDAO.swift; sourceTree = "<group>"; };
+		E5DA2329206965D10010DA8B /* ActiviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteViewController.swift; sourceTree = "<group>"; };
 		E5DF485C205920C400A3797E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E5E92BAD20612777000E0C7A /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DAO.swift; path = ../DAO.swift; sourceTree = "<group>"; };
 		E5E92BAF206127EB000E0C7A /* TraitementDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementDAO.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		E5E92BAB20612686000E0C7A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E5DA2329206965D10010DA8B /* ActiviteViewController.swift */,
 				E5821926204D776000A2C51C /* TraitementViewController.swift */,
 				E5DF485C205920C400A3797E /* MenuViewController.swift */,
 				E503BF4220468ED7003800B8 /* ViewController.swift */,
@@ -306,6 +309,7 @@
 				E5CD88DE2063F7C60085D547 /* CDRdvDAO.swift in Sources */,
 				E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */,
 				E53BE605204DA5FB0037222E /* ProfessionnelTableViewCell.swift in Sources */,
+				E5DA232B206965D10010DA8B /* ActiviteViewController.swift in Sources */,
 				E53BE604204D99360037222E /* ProfessionnelViewController.swift in Sources */,
 				E5CD88DA2063E46D0085D547 /* CoreDataConnection.swift in Sources */,
 				E5E92BB0206127EB000E0C7A /* TraitementDAO.swift in Sources */,
