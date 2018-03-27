@@ -34,6 +34,12 @@ UITableViewDelegate {
     @IBOutlet weak var heureAvance: UITextField!
     @IBOutlet weak var dateRdv: UIDatePicker!
     
+    
+    
+    @IBAction func cancelPopUp(_ sender: Any) {
+        self.view.removeFromSuperview()
+    }
+    
     @IBAction func Valider(_ sender: Any) {
         
         //print(dateRdv.date.addingTimeInterval(3600))
@@ -59,6 +65,7 @@ UITableViewDelegate {
         } catch {
             print("Failed saving")
         }
+        self.view.removeFromSuperview()
         
     }
     override func viewDidLoad() {

@@ -63,6 +63,13 @@ UITableViewDelegate{
     @IBOutlet weak var dateFinTraitement: UIDatePicker!//datepicker Fin du traitement
     var nom : String = ""
     
+    
+    
+    @IBAction func cancelPopUp(_ sender: Any) {
+        self.view.removeFromSuperview()
+    }
+    
+    
     @IBAction func valider(_ sender: Any) {//called when click on the valider button
         /*print(dateDebutTraitement.date.addingTimeInterval(3600))
         print(heureTraitement.date)
@@ -133,6 +140,8 @@ UITableViewDelegate{
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
         EventHandler.getInstance().createTraitementEvent(title: nom, startDate: dateDebutTraitement.date as NSDate, endDate: dateFinTraitement.date as NSDate, heureTraitement: heureTraitement.date as NSDate)
+        
+        self.view.removeFromSuperview()
     }
     
     func DeleteAllData(){
