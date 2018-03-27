@@ -22,6 +22,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         fetchDataRdv()
         fetchActivite()
         planning = planning.sorted()
+        rdv = rdv.sorted()
         // Do any additional setup after loading the view.
     }
 
@@ -65,7 +66,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 affich += " - "
                 affich += data.value(forKey : "nom") as? String ?? " "
                 
-                planning.append(affich)
+                
+                if(Calendar.current.component(.day, from:(date ?? Date()))==Calendar.current.component(.day, from:(Date()))) && (Calendar.current.component(.month, from:(date ?? Date()))==Calendar.current.component(.month, from:(Date()))){
+                    planning.append(affich)
+                }
             }
             
         } catch {
@@ -91,6 +95,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 //var affich = String(describing: Int(data.value(forKey : "heureDeTraitement")as? Int32 ?? -1))
                 let date = (data.value(forKey : "heureTraitement")) as? Date
+                let dateDeb = (data.value(forKey : "dateDebutDeTraitement")) as? Date
+                let dateFin = (data.value(forKey : "dateFinDeTraitement")) as? Date
+                
+                
                 var affich = String(Calendar.current.component(.hour, from:(date ?? Date())))
                 
                 
@@ -103,7 +111,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 affich += " - "
                 affich += data.value(forKey : "nom") as? String ?? " "
                 
-                planning.append(affich)
+                if(Calendar.current.component(.day, from:(dateDeb ?? Date()))<=Calendar.current.component(.day, from:(Date()))) && (Calendar.current.component(.month, from:(dateDeb ?? Date()))<=Calendar.current.component(.month, from:(Date()))) && Calendar.current.component(.day, from:(dateFin ?? Date()))>=Calendar.current.component(.day, from:(Date())) && (Calendar.current.component(.month, from:(dateFin ?? Date()))>=Calendar.current.component(.month, from:(Date()))){// on verifie que le date du jour est entre le début et la fin du traitement
+                    planning.append(affich)
+                }
             }
             
         } catch {
@@ -139,7 +149,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 affich += " - "
                 affich += data.value(forKey : "professionnel") as? String ?? " "
                 
-                planning.append(affich)
+                if(Calendar.current.component(.day, from:(date ?? Date()))==Calendar.current.component(.day, from:(Date()))) && (Calendar.current.component(.month, from:(date ?? Date()))==Calendar.current.component(.month, from:(Date()))){
+                    planning.append(affich)
+                }
             }
             
         } catch {
@@ -185,7 +197,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 affich += " - "
                 affich += data.value(forKey : "professionnel") as? String ?? " "
                 
-                rdv.append(affich)
+                if(Calendar.current.component(.day, from:(date ?? Date()))<=Calendar.current.component(.day, from:(Date()))){
+                    rdv.append(affich)
+                }
+                
             }
             
         } catch {

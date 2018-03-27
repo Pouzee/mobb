@@ -40,6 +40,9 @@ class ActiviteViewController: UIViewController {
             rdv.rappel = Int32(Int(rappelActivite.text ?? "0") ?? 0)
             rdv.nom = nomActivite.text
             
+            if ((rdv.heure! as Date) < Date()){
+                rdv.heure = Date() as NSDate
+            }
             
             try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
             

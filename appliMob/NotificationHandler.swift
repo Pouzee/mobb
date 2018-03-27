@@ -39,9 +39,8 @@ class NotificationHandler{
         UNUserNotificationCenter.current().setNotificationCategories([categorie])
     
         let content = UNMutableNotificationContent()
-        content.title="Alerte médicament"
-        content.subtitle="Attention medoc"
-        content.body="prend ton medoc"
+        content.title="Alerte etat"
+        content.body="Vous sentez vous bien ?"
         content.categoryIdentifier="cat"
     
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)

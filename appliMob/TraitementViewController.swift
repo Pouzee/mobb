@@ -98,6 +98,14 @@ UITableViewDelegate{
             traitement.heureTraitement = heureTraitement.date as NSDate
             traitement.nom = nom
             
+            if ((traitement.dateDebutDeTraitement! as Date) < Date()){
+                traitement.dateDebutDeTraitement = Date() as NSDate
+            }
+            if ((traitement.dateFinDeTraitement! as Date) < (traitement.dateDebutDeTraitement! as Date)){
+                traitement.dateFinDeTraitement = traitement.dateDebutDeTraitement
+            }
+            
+            
             
             try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
             

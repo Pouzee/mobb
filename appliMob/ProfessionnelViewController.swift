@@ -59,6 +59,9 @@ UITableViewDelegate {
             rdv.rappel = Int32(Int(heureAvance.text ?? "0") ?? 0)
             rdv.professionnel = nom
             
+            if ((rdv.date! as Date) < Date()){
+                rdv.date = Date() as NSDate
+            }
             
             try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
             
@@ -69,6 +72,9 @@ UITableViewDelegate {
         let dateAvance = dateRdv.date.addingTimeInterval(TimeInterval(-3600*(diff ?? 0)))
         NotificationHandler.getInstance().createRdvNotification(date : Calendar.current.dateComponents(in: TimeZone.current, from: dateAvance), titre: nom)
         EventHandler.getInstance().createEvent(title: nom, date: dateAvance as NSDate)
+        if(nom == "Neurologue"){
+            NotificationHandler.getInstance().createStateNotification(date: Date().addingTimeInterval(5))
+        }
         self.view.removeFromSuperview()
         
     }

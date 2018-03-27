@@ -29,7 +29,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if(response.actionIdentifier == "oui"||response.actionIdentifier == "non"||response.actionIdentifier == "dyskinesie"){
-            print(response.actionIdentifier)
+            do {
+                let synthese : Synthese = try CoreDataDAOFactory.getInstance().getSyntheseDAO().create()
+                synthese.date = Date() as NSDate
+                synthese.texte = response.actionIdentifier
+
+                
+                
+                try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
+                
+            } catch {
+                print("Failed saving")
+            }
+        }
+        else if (response.actionIdentifier == "nonTraitement"){
+            NotificationHandler.getInstance().createSecondTraitementNotification()
+        }
+        else if(response.actionIdentifier == "ouiRappelTraitement"){
+            do {
+                let synthese : Synthese = try CoreDataDAOFactory.getInstance().getSyntheseDAO().create()
+                synthese.date = Date() as NSDate
+                synthese.texte = "retard Traitement"
+                
+                
+                
+                try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
+                
+            } catch {
+                print("Failed saving")
+            }
+        }
+        else if(response.actionIdentifier == "nonRappelTraitement"){
+            do {
+                let synthese : Synthese = try CoreDataDAOFactory.getInstance().getSyntheseDAO().create()
+                synthese.date = Date() as NSDate
+                synthese.texte = "oubli traitement"
+                
+                
+                
+                try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
+                
+            } catch {
+                print("Failed saving")
+            }
         }
     }
     
