@@ -587,10 +587,10 @@
             </objects>
             <point key="canvasLocation" x="-273" y="2453"/>
         </scene>
-        <!--View Controller-->
+        <!--Synthese View Controller-->
         <scene sceneID="Ugc-yG-Xew">
             <objects>
-                <viewController id="B3v-aZ-X9w" sceneMemberID="viewController">
+                <viewController id="B3v-aZ-X9w" customClass="SyntheseViewController" customModule="appliMob" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wbV-kD-1K7"/>
                         <viewControllerLayoutGuide type="bottom" id="mo3-Lv-pfB"/>
@@ -611,7 +611,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="syntheseCell" id="jda-9S-CgX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="syntheseCell" id="jda-9S-CgX" customClass="SyntheseTableViewCell" customModule="appliMob" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="311" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jda-9S-CgX" id="431-Y0-YXH">
@@ -627,12 +627,21 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="information" destination="Pga-ta-HFu" id="ZwR-Ie-CQf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="B3v-aZ-X9w" id="5HP-Zr-M37"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="syntheseTable" destination="YBh-T6-g46" id="Src-d0-MsR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39E-Na-sfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

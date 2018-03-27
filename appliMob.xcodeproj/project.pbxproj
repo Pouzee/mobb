@@ -33,6 +33,10 @@
 		E5CE13E1206A30DB006FEC5A /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CE13E0206A30DB006FEC5A /* NotificationHandler.swift */; };
 		E5DA232B206965D10010DA8B /* ActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA2329206965D10010DA8B /* ActiviteViewController.swift */; };
 		E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF485C205920C400A3797E /* MenuViewController.swift */; };
+		E5E2CC1C206A914C00348B48 /* SyntheseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2CC1B206A914C00348B48 /* SyntheseViewController.swift */; };
+		E5E2CC1E206A919300348B48 /* SyntheseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2CC1D206A919300348B48 /* SyntheseTableViewCell.swift */; };
+		E5E2CC20206A986900348B48 /* SyntheseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2CC1F206A986900348B48 /* SyntheseDAO.swift */; };
+		E5E2CC22206A987B00348B48 /* CDSyntheseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2CC21206A987B00348B48 /* CDSyntheseDAO.swift */; };
 		E5E92BAE20612777000E0C7A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E92BAD20612777000E0C7A /* DAO.swift */; };
 		E5E92BB0206127EB000E0C7A /* TraitementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E92BAF206127EB000E0C7A /* TraitementDAO.swift */; };
 		E5E92BB220612BAA000E0C7A /* AbstractDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E92BB120612BAA000E0C7A /* AbstractDAOFactory.swift */; };
@@ -81,6 +85,10 @@
 		E5CE13E0206A30DB006FEC5A /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		E5DA2329206965D10010DA8B /* ActiviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteViewController.swift; sourceTree = "<group>"; };
 		E5DF485C205920C400A3797E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E5E2CC1B206A914C00348B48 /* SyntheseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntheseViewController.swift; sourceTree = "<group>"; };
+		E5E2CC1D206A919300348B48 /* SyntheseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntheseTableViewCell.swift; sourceTree = "<group>"; };
+		E5E2CC1F206A986900348B48 /* SyntheseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntheseDAO.swift; sourceTree = "<group>"; };
+		E5E2CC21206A987B00348B48 /* CDSyntheseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDSyntheseDAO.swift; sourceTree = "<group>"; };
 		E5E92BAD20612777000E0C7A /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DAO.swift; path = ../DAO.swift; sourceTree = "<group>"; };
 		E5E92BAF206127EB000E0C7A /* TraitementDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementDAO.swift; sourceTree = "<group>"; };
 		E5E92BB120612BAA000E0C7A /* AbstractDAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDAOFactory.swift; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 		E5E92BAA20612650000E0C7A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				E5E2CC1D206A919300348B48 /* SyntheseTableViewCell.swift */,
 				E569F4892056D45400B0EFEF /* MenuTableViewCell.swift */,
 				E53BE5FF204D961F0037222E /* ProfessionnelTableViewCell.swift */,
 				E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */,
@@ -165,6 +174,7 @@
 		E5E92BAB20612686000E0C7A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E5E2CC1B206A914C00348B48 /* SyntheseViewController.swift */,
 				E5DA2329206965D10010DA8B /* ActiviteViewController.swift */,
 				E5821926204D776000A2C51C /* TraitementViewController.swift */,
 				E5DF485C205920C400A3797E /* MenuViewController.swift */,
@@ -180,6 +190,8 @@
 				E5821928204D7CD600A2C51C /* TraitementPList.plist */,
 				E5E92BAD20612777000E0C7A /* DAO.swift */,
 				E5E92BB120612BAA000E0C7A /* AbstractDAOFactory.swift */,
+				E5E2CC1F206A986900348B48 /* SyntheseDAO.swift */,
+				E5E2CC21206A987B00348B48 /* CDSyntheseDAO.swift */,
 				E5E92BB320612C11000E0C7A /* CoreDataDAOFactory.swift */,
 				E5E92BB520612C9E000E0C7A /* CDTraitementDAO.swift */,
 				E5CD88DD2063F7C60085D547 /* CDRdvDAO.swift */,
@@ -307,10 +319,14 @@
 				E5821925204D74A500A2C51C /* TraitementTableViewCell.swift in Sources */,
 				E5873224206A29A9001F0BEF /* CDActiviteDAO.swift in Sources */,
 				E503BF4320468ED7003800B8 /* ViewController.swift in Sources */,
+				E5E2CC1E206A919300348B48 /* SyntheseTableViewCell.swift in Sources */,
 				E5E92BB420612C11000E0C7A /* CoreDataDAOFactory.swift in Sources */,
 				E5CD88D82063E4450085D547 /* CDDAO.swift in Sources */,
+				E5E2CC1C206A914C00348B48 /* SyntheseViewController.swift in Sources */,
 				E569F48A2056D45400B0EFEF /* MenuTableViewCell.swift in Sources */,
 				E5CD88DC2063F75C0085D547 /* RdvDAO.swift in Sources */,
+				E5E2CC22206A987B00348B48 /* CDSyntheseDAO.swift in Sources */,
+				E5E2CC20206A986900348B48 /* SyntheseDAO.swift in Sources */,
 				E503BF4920468ED7003800B8 /* appliMob.xcdatamodeld in Sources */,
 				E56FA5CB2064EBE100EA6C1C /* EventHandler.swift in Sources */,
 				E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */,

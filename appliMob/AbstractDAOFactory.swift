@@ -13,11 +13,14 @@ protocol AbstractDAOFactory {
     associatedtype TraitementDAO
     associatedtype ActiviteDAO
     associatedtype RdvDAO
+    associatedtype SyntheseDAO
     
 
     
     func getTraitementDAO() ->TraitementDAO
     func getRdvDAO() -> RdvDAO
     func getActiviteDAO() -> ActiviteDAO
+    func getSyntheseDAO() -> SyntheseDAO
+    
     
 }
