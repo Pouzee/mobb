@@ -11,9 +11,13 @@ import Foundation
 
 protocol AbstractDAOFactory {
     associatedtype TraitementDAO
+    associatedtype ActiviteDAO
+    associatedtype RdvDAO
     
 
     
     func getTraitementDAO() ->TraitementDAO
+    func getRdvDAO() -> RdvDAO
+    func getActiviteDAO() -> ActiviteDAO
     
 }

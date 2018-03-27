@@ -23,6 +23,8 @@
 		E5821925204D74A500A2C51C /* TraitementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */; };
 		E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5821926204D776000A2C51C /* TraitementViewController.swift */; };
 		E5821929204D7CD600A2C51C /* TraitementPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5821928204D7CD600A2C51C /* TraitementPList.plist */; };
+		E5873222206A2904001F0BEF /* ActiviteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5873221206A2904001F0BEF /* ActiviteDAO.swift */; };
+		E5873224206A29A9001F0BEF /* CDActiviteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5873223206A29A9001F0BEF /* CDActiviteDAO.swift */; };
 		E596FCE4205ABA670024F885 /* RdvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */; };
 		E5CD88D82063E4450085D547 /* CDDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88D72063E4450085D547 /* CDDAO.swift */; };
 		E5CD88DA2063E46D0085D547 /* CoreDataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD88D92063E46D0085D547 /* CoreDataConnection.swift */; };
@@ -68,6 +70,8 @@
 		E5821924204D74A500A2C51C /* TraitementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraitementTableViewCell.swift; path = ../TraitementTableViewCell.swift; sourceTree = "<group>"; };
 		E5821926204D776000A2C51C /* TraitementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementViewController.swift; sourceTree = "<group>"; };
 		E5821928204D7CD600A2C51C /* TraitementPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TraitementPList.plist; sourceTree = "<group>"; };
+		E5873221206A2904001F0BEF /* ActiviteDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteDAO.swift; sourceTree = "<group>"; };
+		E5873223206A29A9001F0BEF /* CDActiviteDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDActiviteDAO.swift; sourceTree = "<group>"; };
 		E596FCE3205ABA670024F885 /* RdvTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RdvTableViewCell.swift; sourceTree = "<group>"; };
 		E5CD88D72063E4450085D547 /* CDDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDAO.swift; sourceTree = "<group>"; };
 		E5CD88D92063E46D0085D547 /* CoreDataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnection.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				E53BE5FB204D94320037222E /* ProfessionnelPList.plist */,
 				E5CD88D72063E4450085D547 /* CDDAO.swift */,
 				E5CD88D92063E46D0085D547 /* CoreDataConnection.swift */,
+				E5873221206A2904001F0BEF /* ActiviteDAO.swift */,
+				E5873223206A29A9001F0BEF /* CDActiviteDAO.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 				E5E92BAE20612777000E0C7A /* DAO.swift in Sources */,
 				E596FCE4205ABA670024F885 /* RdvTableViewCell.swift in Sources */,
 				E5821925204D74A500A2C51C /* TraitementTableViewCell.swift in Sources */,
+				E5873224206A29A9001F0BEF /* CDActiviteDAO.swift in Sources */,
 				E503BF4320468ED7003800B8 /* ViewController.swift in Sources */,
 				E5E92BB420612C11000E0C7A /* CoreDataDAOFactory.swift in Sources */,
 				E5CD88D82063E4450085D547 /* CDDAO.swift in Sources */,
@@ -305,6 +312,7 @@
 				E5DF485D205920C400A3797E /* MenuViewController.swift in Sources */,
 				E5E92BB620612C9E000E0C7A /* CDTraitementDAO.swift in Sources */,
 				E5E92BB220612BAA000E0C7A /* AbstractDAOFactory.swift in Sources */,
+				E5873222206A2904001F0BEF /* ActiviteDAO.swift in Sources */,
 				E503BF4120468ED7003800B8 /* AppDelegate.swift in Sources */,
 				E5CD88DE2063F7C60085D547 /* CDRdvDAO.swift in Sources */,
 				E5821927204D776000A2C51C /* TraitementViewController.swift in Sources */,

@@ -514,6 +514,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dateActivite" destination="jUm-rb-wtt" id="tuO-oc-Ddv"/>
+                        <outlet property="nomActivite" destination="bwj-TK-j37" id="eUY-2l-F4q"/>
+                        <outlet property="rappelActivite" destination="06I-Gs-A1I" id="Q6i-Ge-weK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97q-5B-qyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,8 @@ import Foundation
 class CoreDataDAOFactory: AbstractDAOFactory {
     
     typealias TraitementDAO = CDTraitementDAO
+    typealias RdvDAO = CDRdvDAO
+    typealias ActiviteDAO = CDActiviteDAO
     
     private static var instance: CoreDataDAOFactory?
     
@@ -31,5 +33,9 @@ class CoreDataDAOFactory: AbstractDAOFactory {
     
     func getRdvDAO() -> CDRdvDAO{
         return CDRdvDAO()
+    }
+    func getActivite() -> CDActiviteDAO{
+        return CDActiviteDAO()
+        
     }
 }

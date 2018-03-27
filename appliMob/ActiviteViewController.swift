@@ -10,6 +10,12 @@ import UIKit
 
 class ActiviteViewController: UIViewController {
 
+    @IBOutlet weak var nomActivite: UITextField!
+    @IBOutlet weak var dateActivite: UIDatePicker!
+    @IBOutlet weak var rappelActivite: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

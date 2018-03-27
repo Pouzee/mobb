@@ -20,6 +20,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         fetchPlanningDataTraitement()
         fetchPlanningDataRdv()
         fetchDataRdv()
+        fetchActivite()
         planning = planning.sorted()
         // Do any additional setup after loading the view.
     }
@@ -39,6 +40,39 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func fetchActivite(){
+        do {
+            // let result = try context.fetch(request)
+            
+            
+            let result : [Activite] = try CoreDataDAOFactory.getInstance().getActiviteDAO().getAll() as! [Activite]
+            for data in result as [NSManagedObject] {
+                print(data.value(forKey: "nom") as! String)
+                
+                
+                //var affich = String(describing: Int(data.value(forKey : "heureDeTraitement")as? Int32 ?? -1))
+                let date = (data.value(forKey : "heureTraitement")) as? Date
+                var affich = String(Calendar.current.component(.hour, from:(date ?? Date())))
+                
+                
+                affich += "h"
+                let minute = String(Calendar.current.component(.minute, from:(date ?? Date())))
+                if (minute.characters.count < 2){
+                    affich += "0"
+                }
+                affich += minute
+                affich += " - "
+                affich += data.value(forKey : "nom") as? String ?? " "
+                
+                planning.append(affich)
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
+    }
     
     func fetchPlanningDataTraitement(){
         /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
