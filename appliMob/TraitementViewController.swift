@@ -123,7 +123,7 @@ UITableViewDelegate{
             print("Failed saving")
         }
         
-        print(Int(dateDebutTraitement.date.timeIntervalSince(Date())))
+       
         let dateNotif = dateDebutTraitement.calendar.date(byAdding: .second, value: Int(dateDebutTraitement.date.timeIntervalSince(Date()))+20, to: dateDebutTraitement.date)
         NotificationHandler.getInstance().createTraitementNotification(date : Calendar.current.dateComponents(in: TimeZone.current, from: dateNotif!))
         //NotificationHandler.getInstance().createStateNotification(date: Date())

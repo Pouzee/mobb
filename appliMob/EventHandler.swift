@@ -57,12 +57,34 @@ class EventHandler {
         event.endDate = startDate.addingTimeInterval(1800) as Date
         event.calendar = self.eventStore.defaultCalendarForNewEvents
         
-        if(ecart.day ?? 0 > 0){
+        if((ecart.day ?? 0) > 0){
             
             let rule = EKRecurrenceRule(recurrenceWith: .daily, interval: 1, end: EKRecurrenceEnd(occurrenceCount: ecart.day!))
             event.addRecurrenceRule(rule)
             
         }
+        do {
+            try self.eventStore.save(event, span: .thisEvent)
+        } catch {
+            print("Bad things happened")
+        }
+        
+        
+        
+        
+    }
+    func createEvent(title: String, date: NSDate) {
+        let event = EKEvent(eventStore: eventStore)
+        
+        // Replace the hour (time) of both dates with 00:00
+               event.title = title
+        event.startDate = date as Date
+        event.endDate = date.addingTimeInterval(3600*3) as Date
+        event.calendar = self.eventStore.defaultCalendarForNewEvents
+      
+        
+            
+        
         do {
             try self.eventStore.save(event, span: .thisEvent)
         } catch {

@@ -65,6 +65,10 @@ UITableViewDelegate {
         } catch {
             print("Failed saving")
         }
+        let diff = Int(heureAvance.text!)
+        let dateAvance = dateRdv.date.addingTimeInterval(TimeInterval(-3600*(diff ?? 0)))
+        NotificationHandler.getInstance().createRdvNotification(date : Calendar.current.dateComponents(in: TimeZone.current, from: dateAvance), titre: nom)
+        EventHandler.getInstance().createEvent(title: nom, date: dateAvance as NSDate)
         self.view.removeFromSuperview()
         
     }

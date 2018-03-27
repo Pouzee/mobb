@@ -132,7 +132,6 @@
 				E5E92BAA20612650000E0C7A /* TableViewCell */,
 				E503BF4020468ED7003800B8 /* AppDelegate.swift */,
 				E503BF4420468ED7003800B8 /* Main.storyboard */,
-				E5821928204D7CD600A2C51C /* TraitementPList.plist */,
 				E503BF4A20468ED7003800B8 /* Assets.xcassets */,
 				E503BF4C20468ED7003800B8 /* LaunchScreen.storyboard */,
 				E503BF4F20468ED7003800B8 /* Info.plist */,
@@ -178,6 +177,7 @@
 		E5E92BAC206126A9000E0C7A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E5821928204D7CD600A2C51C /* TraitementPList.plist */,
 				E5E92BAD20612777000E0C7A /* DAO.swift */,
 				E5E92BB120612BAA000E0C7A /* AbstractDAOFactory.swift */,
 				E5E92BB320612C11000E0C7A /* CoreDataDAOFactory.swift */,

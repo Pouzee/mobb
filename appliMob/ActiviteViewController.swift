@@ -46,6 +46,10 @@ class ActiviteViewController: UIViewController {
         } catch {
             print("Failed saving")
         }
+        let diff = Int(rappelActivite.text!)
+        let dateAvance = dateActivite.date.addingTimeInterval(TimeInterval(-3600*(diff ?? 0)))
+        NotificationHandler.getInstance().createActiviteNotification(date : Calendar.current.dateComponents(in: TimeZone.current, from: dateAvance), titre: nomActivite.text!)
+        EventHandler.getInstance().createEvent(title: nomActivite.text!, date: dateAvance as NSDate)
         self.view.removeFromSuperview()
     }
     /*
