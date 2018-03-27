@@ -34,7 +34,7 @@ class CoreDataDAOFactory: AbstractDAOFactory {
     func getRdvDAO() -> CDRdvDAO{
         return CDRdvDAO()
     }
-    func getActivite() -> CDActiviteDAO{
+    func getActiviteDAO() -> CDActiviteDAO{
         return CDActiviteDAO()
         
     }

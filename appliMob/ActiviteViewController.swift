@@ -34,6 +34,18 @@ class ActiviteViewController: UIViewController {
 
     @IBAction func validatePopUp(_ sender: Any) {
         
+        do {
+            let rdv : Activite = try CoreDataDAOFactory.getInstance().getActiviteDAO().create()
+            rdv.heure = dateActivite.date/*.addingTimeInterval(3600)*/ as NSDate
+            rdv.rappel = Int32(Int(rappelActivite.text ?? "0") ?? 0)
+            rdv.nom = nomActivite.text
+            
+            
+            try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
+            
+        } catch {
+            print("Failed saving")
+        }
         self.view.removeFromSuperview()
     }
     /*

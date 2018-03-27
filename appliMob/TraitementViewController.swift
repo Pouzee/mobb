@@ -98,6 +98,7 @@ UITableViewDelegate{
             traitement.heureTraitement = heureTraitement.date as NSDate
             traitement.nom = nom
             
+            
             try CoreDataDAOFactory.getInstance().getTraitementDAO().save()
             
             
@@ -122,22 +123,10 @@ UITableViewDelegate{
             print("Failed saving")
         }
         
-        let oui = UNNotificationAction(identifier: "oui", title: "oui", options: .destructive)
-        let non = UNNotificationAction(identifier: "non", title: "non", options: .destructive)
-        let dyskinesie = UNNotificationAction(identifier: "dyskinesie", title: "dyskinesie", options: .destructive)
-        
-        let categorie = UNNotificationCategory(identifier: "cat", actions: [oui,non,dyskinesie], intentIdentifiers: [], options: [])
-        UNUserNotificationCenter.current().setNotificationCategories([categorie])
-        
-        let content = UNMutableNotificationContent()
-        content.title="Alerte médicament"
-        content.subtitle="Attention medoc"
-        content.body="prend ton medoc"
-        content.categoryIdentifier="cat"
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        let request = UNNotificationRequest(identifier: "any", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        print(Int(dateDebutTraitement.date.timeIntervalSince(Date())))
+        let dateNotif = dateDebutTraitement.calendar.date(byAdding: .second, value: Int(dateDebutTraitement.date.timeIntervalSince(Date()))+20, to: dateDebutTraitement.date)
+        NotificationHandler.getInstance().createTraitementNotification(date : Calendar.current.dateComponents(in: TimeZone.current, from: dateNotif!))
+        //NotificationHandler.getInstance().createStateNotification(date: Date())
         
         EventHandler.getInstance().createTraitementEvent(title: nom, startDate: dateDebutTraitement.date as NSDate, endDate: dateFinTraitement.date as NSDate, heureTraitement: heureTraitement.date as NSDate)
         

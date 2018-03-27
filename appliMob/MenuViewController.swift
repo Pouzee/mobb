@@ -52,7 +52,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 
                 //var affich = String(describing: Int(data.value(forKey : "heureDeTraitement")as? Int32 ?? -1))
-                let date = (data.value(forKey : "heureTraitement")) as? Date
+                let date = (data.value(forKey : "heure")) as? Date
                 var affich = String(Calendar.current.component(.hour, from:(date ?? Date())))
                 
                 

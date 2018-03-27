@@ -16,12 +16,17 @@ class EventHandler {
     private let eventStore = EKEventStore()
     
     init() {
+        requestAuth()
+    }
+    
+    func requestAuth(){
         if (EKEventStore.authorizationStatus(for: .event) != EKAuthorizationStatus.authorized) {
-        self.eventStore.requestAccess(to: .event, completion: {
-            granted, error in
-            
-        })
-    }}
+            self.eventStore.requestAccess(to: .event, completion: {
+                granted, error in
+                
+            })
+        }
+    }
     
     // Singleton pattern
     static func getInstance() -> EventHandler {
